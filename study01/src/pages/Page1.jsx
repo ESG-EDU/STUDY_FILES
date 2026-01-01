@@ -2,19 +2,12 @@ import { useNavigate } from 'react-router'
 
 const Page1 = () => {
   const navigate =  useNavigate()
-  const onclick = (data) => {
-    // const data = arr[index]
-    // console.log(data)
-    // location.href = 'Select.html';
-    navigate('page2', {state: data})
-  }
+  const onclick = data => navigate('page2', {state: data})
   const arr = [
     { "key":1, "name":"스티븐", "email":"jobs@shellfolder.com", "regDate":"2023-02-28", "pwd": "1", "gender": true },
     { "key":2, "name":"에브릴", "email":"lavigne@shellfolder.com", "regDate":"2023-02-27", "pwd": "2", "gender": false },
   ]
-  const styles = {
-    "cursor":"pointer"
-  }
+  const styles = { "cursor":"pointer" }
   return (
     <div className="container mt-3">
       <h1 className="display-1 text-center">사용자 목록</h1>
